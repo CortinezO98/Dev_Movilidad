@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'WorkSans', sans-serif;
+}
+
+.text-1 {
+    text-align: center;
+    margin-top: 15vh; 
+    transform: translateY(-50%); 
+    font-size: 3em;
+    color: #BED000!important;
+    text-shadow: 2px 2px 2px grey !important; 
+    font-weight: 500;
+}
+
+.logo {
+    height: auto; /* Ajusta automáticamente la altura del logo */
+    max-height: 100px; /* Ajusta la altura máxima del logo */
+}
+
+.btn-success {
+    --bs-btn-bg: #BED000 !important;
+    --bs-btn-border-color: #BED000 !important;
+    --bs-btn-disabled-bg: #BED000 !important;
+    --bs-btn-disabled-border-color: #BED000 !important;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #BED000;
+    --bs-btn-border-color: #BED000;
+    --bs-btn-hover-bg: #BED000;
+    --bs-btn-hover-border-color: #BED000;
+    --bs-btn-active-bg: #BED000;
+    --bs-btn-active-border-color: #BED000;
+    --bs-btn-disabled-color: #BED000;
+    --bs-btn-disabled-border-color: #BED000;
+}
+
+.text-bg-success {
+    background-color: #BED000 !important;
+}
+
+.color-a {
+    color: #BED000 !important;
+}
+
+.card-link:hover {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 3px 3px 8px grey !important; 
+}
+
+.card-link {
+    margin: 10px 0; 
+}
+
+.a-none {
+    color: inherit; 
+    text-decoration: none;
+}
+
+.card-link > .card-footer {
+    min-height: 65px !important;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* Estilos del footer */
+.footer-container {
+    margin-top: 60px;
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+}
+
+.footer {
+    background-color: white!important; /* Fondo blanco para el footer */
+    color: #00324D!important; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.footer-button {
+    display: inline-block;
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: #fff !important; /* Color del texto */
+    border: 2px solid #007BFF; /* Color del contorno del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados del botón */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón sobre el botón */
+    color: #fff; /* Color del texto al pasar el ratón sobre el botón */
+    border-color: #0056b3; /* Color del contorno al pasar el ratón sobre el botón */
+}
+
+.social-media {
+    background-color: white!important; /* Fondo blanco para el área de redes sociales */
+    padding: 1rem; 
+}
+
+.me-5 {
+    display: flex;
+    align-items: center;
+    color: #39a900 !important; /* Color de texto para "Nuestros canales de contacto" */
+}
+
+.social-icons {
+    margin-left: auto;
+    color: #007BFF !important;
+}
+
+.social-media a {
+    text-decoration: none !important;
+}
+
+/* Estilos de los enlaces sociales */
+.social-media a {
+    color: #1c2331; 
+    margin-right: 0.75rem; 
+}
+
+/* Estilos de las secciones de enlaces */
+.links {
+    padding: 1rem; 
+}
+
+.links .fw-bold {
+    color: #00324D ; /* Color del texto en negrita */
+}
+
+/* Estilos de los enlaces */
+.links a {
+    color: #00324D !important; 
+    margin-bottom: 0.5rem; 
+}
+
+section.links {
+    font-size: 14px !important;
+}
+
+.d-inline-block {
+    width: 60px; 
+    background-color: #1c2331!important;
+}
+
+.header-bar {
+    background-color: #007BFF;
+}
+
+.header-bar > .container > img {
+    max-height: 20px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+/* Estilos de la sección de contacto */
+.contact {
+    padding: 1rem; 
+}
+
+.contact .fw-bold {
+    color: #7c4dff; 
+}
+
+.contact p {
+    margin-bottom: 0.5rem; 
+}
+
+.list-group {
+    text-align: center;     
+}
+
+.list-group-item{
+    margin: 0 auto; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+.footer-list-links > p > a {
+    text-decoration: none;
+}

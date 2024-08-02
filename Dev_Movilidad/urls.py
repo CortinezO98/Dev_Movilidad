@@ -21,4 +21,14 @@ from main.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', IndexView, name="index"),
+    path('panel/', Panel, name="panel"),
+    path('comparendo/', Comparendo, name="comparendo"),
+    path('vehiculos/', Vehiculos, name="vehiculos"),
+    path('taxis/', Taxis, name="taxis"),\
+    path('siniestros/', Siniestros, name="siniestros"),
+    path('exeptuados/', Exeptuados, name="exeptuados"),
+    path('picoyplaca/', Picoyplaca, name="picoyplaca"),
+    path('ventanilla/', Ventanilla, name="ventanilla"),
+    path('agendacita/', Agendacita, name="agendacita"),
+    
 ]

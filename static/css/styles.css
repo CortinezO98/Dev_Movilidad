@@ -1,20 +1,51 @@
 @font-face {
     font-family: 'WorkSans';
-    src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
+    src: url('') format('truetype');
 }
 
 body {
     font-family: 'WorkSans', sans-serif;
 }
 
+
 .text-1 {
     text-align: center;
     margin-top: 15vh; 
     transform: translateY(-50%); 
-    font-size: 3em;
-    color: #BED000!important;
-    text-shadow: 2px 2px 2px grey !important; 
+    font-size: 1.5em; /* Hacer el mensaje más pequeño */
+    color: black!important;
     font-weight: 500;
+}
+
+.header-button-container {
+    text-align: center;
+    margin-top: 1em; 
+}
+
+.btn-green {
+    background-color: #66B352; /* Color verde para el botón */
+    color: #fff !important; /* Color del texto */
+    border: 2px solid #66B352; /* Color del borde */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none;
+    border-radius: 10px; /* Bordes redondeados del botón */
+    font-size: 16px ; /* Tamaño del texto */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-green:hover {
+    background-color: #BED000; 
+    color: #fff; 
+    border-color: #BED000; 
+}
+
+
+@media (max-width: 768px) {
+    .btn-green {
+        width: 60%; 
+    }
 }
 
 .logo {
@@ -42,7 +73,10 @@ body {
 
 .text-bg-success {
     background-color: #BED000 !important;
+    color: #fff !important;
 }
+
+
 
 .color-a {
     color: #BED000 !important;
@@ -70,18 +104,31 @@ body {
     align-items: center; 
 }
 
+.border-success {
+    border-color: #BED000 !important;
+}
+
+
+.texto-contacto {
+    color: #388E3C; 
+    font-family: Arial, sans-serif; 
+    font-size: 1.25rem; 
+    text-align: center;
+    margin-bottom: 1rem;
+}
 /* Estilos del footer */
 .footer-container {
-    margin-top: 60px;
-    position: fixed !important;
+    margin-top: 20px;
     bottom: 0;
     left: 0;
     width: 100%; 
+    background-color: #fff;
 }
 
 .footer {
-    background-color: white!important; /* Fondo blanco para el footer */
+    background-color: #fff!important; /* Fondo blanco para el footer */
     color: #00324D!important; 
+    padding: 1rem;
 }
 
 .button-container {
@@ -93,32 +140,31 @@ body {
 
 .footer-button {
     display: inline-block;
-    background-color: #007BFF; /* Color de fondo del botón */
+    background-color: #0056b3; /* Color de fondo del botón */
     color: #fff !important; /* Color del texto */
-    border: 2px solid #007BFF; /* Color del contorno del botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
+    border: 2px solid #0056b3; /* Color del contorno del botón */
+    padding: 5px 15px; /* Espaciado interno del botón */
     text-decoration: none;
     border-radius: 5px; /* Bordes redondeados del botón */
-    font-size: 16px; /* Tamaño del texto */
+    font-size: 14px; /* Tamaño del texto */
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el ratón sobre el botón */
+    background-color: #BED000; /* Color de fondo al pasar el ratón sobre el botón */
     color: #fff; /* Color del texto al pasar el ratón sobre el botón */
-    border-color: #0056b3; /* Color del contorno al pasar el ratón sobre el botón */
+    border-color: #BED000; /* Color del contorno al pasar el ratón sobre el botón */
 }
 
 .social-media {
-    background-color: white!important; /* Fondo blanco para el área de redes sociales */
-    padding: 1rem; 
+    background-color: white!important; /* Fondo blanco para el área de redes sociales */ 
 }
 
 .me-5 {
     display: flex;
     align-items: center;
-    color: #39a900 !important; /* Color de texto para "Nuestros canales de contacto" */
+    color: #388E3C !important; /* Color de texto para "Nuestros canales de contacto" */
 }
 
 .social-icons {
@@ -202,3 +248,5 @@ section.links {
 .footer-list-links > p > a {
     text-decoration: none;
 }
+
+

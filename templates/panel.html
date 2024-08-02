@@ -1,0 +1,144 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="container">
+    <div class="row animate__animated animate__fadeIn justify-content-center align-items-center">
+        <h2 class="texto-contacto">Selecciona sobre cual trámite requieres apoyo
+        </h2>
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'comparendo' %}" class="a-none">
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/comparendo.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Comparendo
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'vehiculos' %}" class="a-none">
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/grua.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Vehiculos Inmobilizados
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-100 d-none d-lg-block"></div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'taxis' %}" class="a-none">
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/taxi.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Verificación de Taxis
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'siniestros' %}" class="a-none">
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/siniestros.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Siniestros
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-100 d-none d-lg-block"></div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'exeptuados' %}" class="a-none" >
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/exeptuados.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Vehiculos Exeptuados
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'picoyplaca' %}" class="a-none">
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/picoplaca.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Pico y Placa Solidario
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w-100 d-none d-lg-block"></div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'ventanilla' %}" class="a-none" >
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/ventanilla.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Ventanilla Única De Servicios
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-6 col-md-4 col-lg-2">
+            <a href="{% url 'agendacita' %}" class="a-none" >
+                <div class="card border-success card-link">
+                    <div class="card-body rounded-top text-center py-4">
+                        <img src="{% static 'img/agendacita.png' %}" class="" height="61px" alt="logo">
+                    </div>
+                    <div class="card-footer text-bg-success">
+                        Agenda Tu Cita
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+        
+    let tiempoInactividad = 120000; 
+    let temporizadorInactivo;
+
+    function reiniciarTemporizador() {
+        clearTimeout(temporizadorInactivo);
+        temporizadorInactivo = setTimeout(redirigirAlIndex, tiempoInactividad);
+    }
+    function redirigirAlIndex() {
+        window.location.href = "{% url 'index' %}";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        reiniciarTemporizador();
+        document.addEventListener("mousemove", reiniciarTemporizador);
+        document.addEventListener("keydown", reiniciarTemporizador);
+        document.addEventListener("click", reiniciarTemporizador);
+    });
+</script>
+{% endblock %}

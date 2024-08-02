@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-lg-12">
+            <h3><b>Trámite seleccionado:</b> Agenda tu cita</h3>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-lg-12">
+            <iframe src="https://b2cprdciudadanos.b2clogin.com/b2cprdciudadanos.onmicrosoft.com/b2c_1a_signinvus/oauth2/v2.0/authorize?client_id=" frameborder="0" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+
+    <script>
+        
+        let tiempoInactividad = 120000; 
+        let temporizadorInactivo;
+    
+        function reiniciarTemporizador() {
+            clearTimeout(temporizadorInactivo);
+            temporizadorInactivo = setTimeout(redirigirAlIndex, tiempoInactividad);
+        }
+        function redirigirAlIndex() {
+            window.location.href = "{% url 'index' %}";
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            reiniciarTemporizador();
+            document.addEventListener("mousemove", reiniciarTemporizador);
+            document.addEventListener("keydown", reiniciarTemporizador);
+            document.addEventListener("click", reiniciarTemporizador);
+        });
+    </script>
+{% endblock %}
